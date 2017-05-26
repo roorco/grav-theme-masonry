@@ -14,15 +14,22 @@
             {% include 'partials/breadcrumbs.html.twig' %}
             <h1 class="post-title">{{page.title}}</h1>
             <section class="post-meta">
-               <time class="post-date" datetime="{{ page.date | date(site.date_short) }}">{{ page.date | date(site.date_short) }}</time>
+                {# <time class="post-date" datetime="{{ page.date | date(site.date_short) }}">{{ page.date | date(site.date_short) }}</time>
                 {% if page.taxonomy.tag|length > 0 %}
                     on {% for tag in page.taxonomy.tag %}<span class="post-tag-{{tag}}"><a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a></span>{%if not loop.last %}, {% endif %}{% endfor %}
-                {% endif %}
+                {% endif %}#}
             </section>
         </header>
 
         <section class="post-content">
-            {{content}}
+            {{ content }}
+            {{ dump(content) }}
+                {{ dump(page.media.images) }}
+            {% for image in page.media.images %}
+                {{ image }}
+            {% endfor %}
+            </div>
+
             <div id="disqus_thread"></div>
             <noscript><a href="https://disqus.com/?ref_noscript" rel="nofollow">{{ 'THEME_MASONRY.DISQUS.NOSCRIPT'|t }}</a></noscript>
         </section>

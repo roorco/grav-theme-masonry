@@ -4,11 +4,11 @@
     <a href="#" class="nav-close">
         <span class="hidden">Close</span>
     </a>
-    <ul>
+    <ul type="A">
         {% for page in pages.children %}
         {% if page.visible %}
         {% set current_page = (page.active or page.activeChild) ? 'nav-current' : '' %}
-        <li class="nav-{{page.slug}} {{ current_page }}" role="presentation"><a href="{{ page.url }}">{{ page.menu }}</a></li>
+        <li class="nav-{{page.slug}} {{ current_page }}, bold"><a href="{{ page.url }}">{{ page.menu }}</a></li>
         {% endif %}
         {% endfor %}
     </ul>
