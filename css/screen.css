@@ -1243,10 +1243,10 @@ blockquote cite a {
   background: rgba(0, 0, 0, 0.7);
   transition: all 0.5s ease; }
 
-.read-next-story .post {
-  padding-top: 6rem;
-  padding-bottom: 6rem; }
-
+/*.read-next-story .post{
+    padding-top:6rem;
+    padding-bottom:6rem
+}*/
 .read-next-story .post:before {
   content: "Read This Next";
   padding: 4px 10px 5px;
@@ -1881,16 +1881,25 @@ svg:not(:root) {
   cursor: pointer;
   vertical-align: middle; }
   .thumbnail-wrapper a {
-    padding: 100px 0px;
-    font-weight: 700;
-    font-size: 1.5em !important;
-    width: 350px;
-    height: 239px;
+    padding-top: 8em;
+    width: auto;
     position: absolute;
+    left: 2em;
+    right: 2em;
+    top: 2em;
+    bottom: 2em;
     text-transform: uppercase;
     top: 0%;
     vertical-align: middle;
     text-decoration: none; }
+
+.img-title {
+  width: 100%;
+  height: 50%;
+  font-weight: 700;
+  visibility: hidden;
+  text-align: center;
+  display: block; }
 
 .thumbnail-wrapper a:hover:after {
   content: attr(title);
@@ -1901,13 +1910,6 @@ svg:not(:root) {
   height: auto;
   opacity: 0.5;
   background: #FFF; }
-
-.img-title {
-  width: auto;
-  visibility: hidden;
-  text-align: center;
-  display: block;
-  /*white-space: nowrap;*/ }
 
 .thumbnail-wrapper:hover > .img-title {
   visibility: visible; }
